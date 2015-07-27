@@ -1,0 +1,42 @@
+name: 'CES'
+scopeName: 'source.ces'
+fileTypes: ["ces", "wo", "trn", "dm"]
+patterns: [
+    # Comments
+    {
+        match: '(#|\/\/).*$\\n?'
+        name: 'comment'
+    }
+
+    # Keywords
+    {
+        match: '\\b(undefined|defined|FORMAT_LIST|FORMAT_NUMERIC|FORMAT|RSP|RETURN|PROC|ENDPROC|MAP|ENDMAP|MAP_TABLE|CALL_MAP|CALL_PROC|STATE|SPLIT|LIST_LENGTH|UNDEF_LIST|LOCAL|TOKENIZE|WO_MAPPER|MAP_FWD|MAP_BWD)\\b'
+        name: 'keyword'
+    }
+    {
+        name: 'keyword.control'
+        match: '\\b(IF|ELSE|ELIF|FI|WHILE|WEND)\\b'
+    }
+    {
+        name: 'keyword.operator'
+        match: "\\b(AND|OR)\\b"
+    }
+
+    # Variables
+    {
+        match: '(<[^>]*>)'
+        name: 'variable'
+    }
+
+    # Lanuagage reserved
+    {
+        match: '\\b(Result_OK|OK|KOFunc|KOTech)\\b'
+        name: 'variable.language'
+    }
+
+    # Regular expressions
+    {
+        name: 'string.regexp'
+        match: "~(.*)"
+    }
+]
