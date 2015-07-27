@@ -2,41 +2,48 @@ name: 'CES'
 scopeName: 'source.ces'
 fileTypes: ["ces", "wo", "trn", "dm"]
 patterns: [
-    # Comments
-    {
-        match: '(#|\/\/).*$\\n?'
-        name: 'comment'
-    }
-
     # Keywords
     {
-        match: '\\b(undefined|defined|FORMAT_LIST|FORMAT_NUMERIC|FORMAT|RSP|RETURN|PROC|ENDPROC|MAP|ENDMAP|MAP_TABLE|CALL_MAP|CALL_PROC|STATE|SPLIT|LIST_LENGTH|UNDEF_LIST|LOCAL|TOKENIZE|WO_MAPPER|MAP_FWD|MAP_BWD)\\b'
-        name: 'keyword'
+        match: '\\b(undefined|defined|FORMAT_LIST|FORMAT_NUMERIC|FORMAT|RSP|RETURN|PROC|ENDPROC|MAP|ENDMAP|MAP_TABLE|CALL_MAP|CALL_PROC|STATE|SPLIT|LIST_LENGTH|UNDEF_LIST|LOCAL|TOKENIZE|WO_MAPPER|MAP_FWD|MAP_BWD|CHK)\\b'
+        name: 'keyword.ces'
     }
     {
-        name: 'keyword.control'
         match: '\\b(IF|ELSE|ELIF|FI|WHILE|WEND)\\b'
+        name: 'keyword.control.ces'
     }
     {
-        name: 'keyword.operator'
         match: "\\b(AND|OR)\\b"
+        name: 'keyword.operator.ces'
     }
 
     # Variables
     {
         match: '(<[^>]*>)'
-        name: 'variable'
+        name: 'variable.ces'
     }
 
     # Lanuagage reserved
     {
         match: '\\b(Result_OK|OK|KOFunc|KOTech)\\b'
-        name: 'variable.language'
+        name: 'variable.language.ces'
+    }
+
+    {
+        match: '=(.*)$'
+        captures:
+            '1':
+                name: "string.unquoted.ces"
     }
 
     # Regular expressions
     {
-        name: 'string.regexp'
+        name: 'string.regexp.ces'
         match: "~(.*)"
+    }
+
+    # Comments
+    {
+        match: '(#|\/\/).*$\\n?'
+        name: 'comment.ces'
     }
 ]
