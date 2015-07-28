@@ -1,4 +1,4 @@
-# language-ces package
+# language-fp package
 
 Atom Lanuage support for TIBCO Fulfilment Provisioning's CES & TST files
 
