@@ -1,0 +1,28 @@
+name: 'TST'
+scopeName: 'source.tst'
+fileTypes: ["tst"]
+patterns: [
+    # Keywords
+    {
+        match: '\\b(TRGT|ACT|NAME|NVSET|NVSETCHK|WOID|EXPR)\\b'
+        name: 'keyword.ces'
+    }
+    {
+        match: '=([^|]*)$'
+        captures:
+            '1':
+                name: "string.unquoted.tst"
+    }
+
+    # Comments
+    {
+        match: '(#|\/\/).*$\\n?'
+        name: 'comment.tst'
+    }
+
+    # Lanuagage reserved
+    {
+        match: '\\b(Result_OK|OK|KOFunc|KOTech)\\b'
+        name: 'variable.language.ces'
+    }
+]
