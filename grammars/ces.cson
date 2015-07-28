@@ -26,7 +26,13 @@ patterns: [
 
     # Variables
     {
-        match: '(<[^>]*>)'
+        begin: '<'
+        end: '>'
+        patterns: [
+            {
+                include: '#variable_braces'
+            }
+        ]
         name: 'variable.ces'
     }
 
@@ -57,3 +63,19 @@ patterns: [
         name: 'comment.ces'
     }
 ]
+
+repository:
+    variable_braces:
+        {
+            begin: '<'
+            end: '>'
+            patterns: [
+                {
+                    match: '[a-zA-Z0-9]+'
+                    name: 'variable.ces'
+                }
+                {
+                    include: '#variable_braces'
+                }
+            ]
+        }
