@@ -8,7 +8,7 @@ patterns: [
         name: 'keyword.ces'
     }
     {
-        match: '\\b(FORMAT_LIST|FORMAT_NUMERIC|FORMAT_COMMAND|FORMAT|TOKENIZE|CALL_PROC|CALL_MAP|CALL_CODE|UNDEF_LIST|SPLIT)\\b'
+        match: '\\b(FORMAT_LIST|FORMAT_NUMERIC|FORMAT_COMMAND|FORMAT_MESSAGE|FORMAT|TOKENIZE|CALL_PROC|CALL_MAP|CALL_CODE|UNDEF_LIST|SPLIT)\\b'
         name: 'support.function.ces'
     }
     {
