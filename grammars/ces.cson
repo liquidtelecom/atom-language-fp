@@ -4,16 +4,24 @@ fileTypes: ["ces", "wo", "trn", "dm"]
 patterns: [
     # Keywords
     {
-        match: '\\b(undefined|defined|FORMAT_LIST|FORMAT_NUMERIC|FORMAT|RSP|RETURN|PROC|ENDPROC|MAP|ENDMAP|MAP_TABLE|CALL_MAP|CALL_PROC|STATE|SPLIT|LIST_LENGTH|UNDEF_LIST|LOCAL|TOKENIZE|WO_MAPPER|MAP_FWD|MAP_BWD|CHK)\\b'
+        match: '\\b(undefined|defined|PROC|ENDPROC|MAP|ENDMAP|MAP_TABLE|STATE|LIST_LENGTH|LOCAL|WO_MAPPER|MAP_FWD|MAP_BWD|CHK)\\b'
         name: 'keyword.ces'
+    }
+    {
+        match: '\\b(FORMAT_LIST|FORMAT_NUMERIC|FORMAT_COMMAND|FORMAT|TOKENIZE|CALL_PROC|CALL_MAP|CALL_CODE|UNDEF_LIST|SPLIT)\\b'
+        name: 'support.function.ces'
     }
     {
         match: '\\b(IF|ELSE|ELIF|FI|WHILE|WEND)\\b'
         name: 'keyword.control.ces'
     }
     {
+        match: '\\b(RSP|RETURN)\\b'
+        name: 'keyword.control.statement.ces'
+    }
+    {
         match: "\\b(AND|OR)\\b"
-        name: 'keyword.operator.ces'
+        name: 'keyword.operator.logical.ces'
     }
 
     # Variables
@@ -37,8 +45,10 @@ patterns: [
 
     # Regular expressions
     {
-        name: 'string.regexp.ces'
         match: "~(.*)"
+        captures:
+            1:
+                name: 'string.regexp.ces'
     }
 
     # Comments
