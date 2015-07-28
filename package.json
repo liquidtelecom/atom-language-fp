@@ -2,7 +2,7 @@
   "name": "language-fp",
   "version": "0.2.0",
   "description": "Atom language support for TIBCO Fulfilment Provisioning's CES and TST files",
-  "keywords": [],
+  "keywords": ["tibco", "kpsa", "kabira", "ces", "fp"],
   "repository": "https://github.com/oxo42/language-fp",
   "license": "Apache 2.0",
   "engines": {
