@@ -9,7 +9,7 @@ Atom Lanuage support for TIBCO Fulfilment Provisioning.
 ![Screenshot](https://raw.githubusercontent.com/oxo42/language-fp/master/screenshot.png)
 
 ## ASCII Octal escaping
-![Screenshot](https://raw.githubusercontent.com/oxo42/language-fp/master/fpoctal-escape.gif)
+![Octal Escape Animation](https://raw.githubusercontent.com/oxo42/language-fp/master/octal-escape.gif)
 
 ## Escapings
 | Raw | Escaped |
