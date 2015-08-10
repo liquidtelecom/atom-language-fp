@@ -1,0 +1,29 @@
+'scopeName': 'source.act'
+'fileTypes': [
+    'act'
+    'soc'
+    'ocs'
+    'kds'
+]
+'firstLineMatch': '-\\*- ACT -\\*-'
+'name': 'ACT'
+'patterns': [
+    {
+        'include': 'source.cpp'
+    }
+    {
+        'match': '\\bself\\b'
+        'name': 'variable.language.this.act'
+    }
+    {
+        'match': '\\b(action|package|interface|entity|string)\\b'
+        'name': 'storage.type.act'
+    }
+
+    {
+        'match': '\\b(declare|create|attribute)\\b'
+        'name': 'storage.modifier.act'
+    }
+
+
+]
