@@ -4,6 +4,7 @@
     'soc'
     'ocs'
     'kds'
+    'sdl'
 ]
 'firstLineMatch': '-\\*- ACT -\\*-'
 'name': 'ACT'
