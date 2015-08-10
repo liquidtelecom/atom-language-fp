@@ -1,5 +1,25 @@
 # language-fp package
 
-Atom Lanuage support for TIBCO Fulfilment Provisioning's CES & TST files
+Atom Lanuage support for TIBCO Fulfilment Provisioning.
+
+## Syntax Highlighting
+* CES files (includes .trn, .wo, ) & TST files.
+* TST files
 
 ![Screenshot](https://raw.githubusercontent.com/oxo42/language-fp/master/screenshot.png)
+
+## ASCII Octal escaping
+![Screenshot](https://raw.githubusercontent.com/oxo42/language-fp/master/fpoctal-escape.gif)
+
+## Escapings
+| Raw | Escaped |
+|:----|:--------|
+| <   | \074    |
+| >   | \076    |
+| ,   | \054    |
+
+## Default Keymaps
+| Operation | Keymap                |
+|:----------|:----------------------|
+| Escape    | ctrl-alt-e ctrl-alt-e |
+| Un-escape | ctrl-alt-e ctrl-alt-u |

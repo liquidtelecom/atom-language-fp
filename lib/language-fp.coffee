@@ -19,7 +19,7 @@ module.exports =
             sel.insertText(t(sel.getText()), { "select": true}) for sel in selections
 
     escape: (text) ->
-        text.replace(/</g, '\\074').replace(/>/g, '\\076')
+        text.replace(/</g, '\\074').replace(/>/g, '\\076').replace(/,/, '\\054')
 
     unescape: (text) ->
-        text.replace(/\\074/g, '<').replace(/\\076/g, '>')
+        text.replace(/\\074/g, '<').replace(/\\076/g, '>').replace(/\\054/, ',')
