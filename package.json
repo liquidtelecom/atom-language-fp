@@ -1,7 +1,7 @@
 {
   "name": "language-fp",
   "main": "./lib/language-fp",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "Atom language support for TIBCO Fulfilment Provisioning's CES and TST files",
   "keywords": [
     "tibco",
