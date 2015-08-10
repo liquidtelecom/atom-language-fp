@@ -1,0 +1,30 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'FP Octal Escape'
+      'command': 'language-fp:escape'
+    },
+    {
+      'label': 'Octal Un-escape'
+      'command': 'language-fp:unescape'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'language-fp'
+      'submenu': [
+        {
+          'label': 'FP Octal Escape'
+          'command': 'language-fp:escape'
+        },
+        {
+          'label': 'FP Octal Un-escape'
+          'command': 'language-fp:unescape'
+        }
+      ]
+    ]
+  }
+]
