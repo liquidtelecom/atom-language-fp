@@ -17,7 +17,7 @@
         'name': 'variable.language.this.act'
     }
     {
-        'match': '\\b(action|package|interface|entity|string)\\b'
+        'match': '\\b(action|string)\\b'
         'name': 'storage.type.act'
     }
 
@@ -25,6 +25,25 @@
         'match': '\\b(declare|create|attribute)\\b'
         'name': 'storage.modifier.act'
     }
+    {
+        'match': '\\b(expose\\s*entity)\\b\\s*([_A-Za-z][_A-Za-z0-9]*)\\b\\s*(with\\s*interface)\\b\\s*([_A-Za-z][_A-Za-z0-9]*)'
+        'captures':
+            '1':
+                'name': 'storage.type.act'
+            '2':
+                'name': 'entity.name.type.inherited.act'
+            '3':
+                'name': 'storage.type.modifier.act'
+            '4':
+                'name': 'entity.name.type.act'
+    }
 
-
+    {
+        match: '\\b(package|interface|entity)\\b\\s*([_A-Za-z][_A-Za-z0-9]*)'
+        captures:
+            1:
+                name: 'storage.type.act'
+            2:
+                name: 'entity.name.type.inherited.act'
+    }
 ]
