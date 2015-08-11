@@ -17,12 +17,19 @@ patterns: [
         name: 'variable.language.this.act'
     }
     {
+        match: '\\$\\([^)]+\\)'
+        name: "string.unquoted.ces"
+    }
+    {
         match: '\\b(action|string)\\b'
         name: 'storage.type.act'
     }
-
     {
-        match: '\\b(declare|create|attribute)\\b'
+        match: '\\b(import|use|component)\\b'
+        name: 'keyword.control.cpp'
+    }
+    {
+        match: '\\b(declare|create|attribute|extentless|local)\\b'
         name: 'storage.modifier.act'
     }
     {
@@ -39,7 +46,7 @@ patterns: [
     }
 
     {
-        match: '\\b(package|interface|entity)\\b\\s*([_A-Za-z][_A-Za-z0-9]*)'
+        match: '\\b(package|interface|entity|deploy|engine)\\b\\s*([_A-Za-z][_A-Za-z0-9]*)'
         captures:
             1:
                 name: 'storage.type.act'

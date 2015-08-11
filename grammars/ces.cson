@@ -2,24 +2,6 @@ name: 'CES'
 scopeName: 'source.ces'
 fileTypes: ["ces", "wo", "trn", "dm"]
 patterns: [
-    #{
-    #    'begin': '(^[ \\t]+)?(?=#)'
-    #    'beginCaptures':
-    #        '1':
-    #            'name': 'punctuation.whitespace.comment.leading.ces'
-    #        'end': '(?!\\G)'
-    #        'patterns': [
-    #            {
-    #                'begin': '#'
-    #                'beginCaptures':
-    #                    '0':
-    #                        'name': 'punctuation.definition.comment.ces'
-    #                'end': '\\n'
-    #                'name': 'comment.line.number-sign.python'
-    #            }
-    #        ]
-    #}
-
     # Keywords
     {
         match: '\\b(undefined|defined|PROC|ENDPROC|MAP|ENDMAP|MAP_TABLE|STATE|LIST_LENGTH|LOCAL|WO_MAPPER|MAP_FWD|MAP_BWD|CHK)\\b'
