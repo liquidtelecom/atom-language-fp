@@ -3,8 +3,9 @@
 Atom Lanuage support for TIBCO Fulfilment Provisioning.
 
 ## Syntax Highlighting
-* CES files (includes .trn, .wo, ) & TST files.
+* Command Eval Script
 * TST files
+* Action Language
 
 ![CES Screenshot](https://raw.githubusercontent.com/oxo42/language-fp/master/screenshot.png)
 ![Action Language Screenshot](https://raw.githubusercontent.com/oxo42/language-fp/master/actionlang.png)
