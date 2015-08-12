@@ -1,7 +1,7 @@
 {
   "name": "language-fp",
   "main": "./lib/language-fp",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Atom language support for TIBCO FP's Action Language (ACT), Command Eval Script (CES) and TST files",
   "keywords": [
     "tibco",
