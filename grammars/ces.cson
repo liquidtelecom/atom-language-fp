@@ -63,7 +63,7 @@ patterns: [
         name: 'comment.ces'
     }
     {
-        match: '\\s+#.*$'
+        match: '^\\s*#.*$'
         name: 'comment.ces'
     }
 ]
