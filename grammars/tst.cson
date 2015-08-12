@@ -4,8 +4,8 @@ fileTypes: ["tst"]
 patterns: [
     # Keywords
     {
-        match: '\\b(TRGT|ACT|NAME|NVSET|NVSETCHK|WOID|EXPR)\\b'
-        name: 'keyword.ces'
+        match: '\\b(TRGT|ACT|NAME|NVSET|NVSETCHK|EXPR|CHK|WOID)\\b'
+        name: 'storage.type.ces'
     }
     {
         match: '=([^|]*)$'
@@ -16,8 +16,12 @@ patterns: [
 
     # Comments
     {
-        match: '(#|\/\/).*$\\n?'
-        name: 'comment.tst'
+        match: '\/\/.*$\\n?'
+        name: 'comment.ces'
+    }
+    {
+        match: '^\\s*#.*$'
+        name: 'comment.ces'
     }
 
     # Lanuagage reserved
