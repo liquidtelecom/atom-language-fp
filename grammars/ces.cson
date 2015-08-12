@@ -1,4 +1,4 @@
-name: 'CES'
+name: 'Command Eval Script'
 scopeName: 'source.ces'
 fileTypes: ["ces", "wo", "trn", "dm"]
 patterns: [
