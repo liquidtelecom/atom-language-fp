@@ -43,6 +43,13 @@ describe "language-fp", ->
                 expect(editor.getText()).
                     toBe "\\074request\\076\\074so>service order number"
 
+        it "escapes multiple commas", ->
+            editor.setText "foo,bar,baz"
+            editor.setSelectedBufferRange([[0,0], [0,11]])
+            trigger "language-fp:escape", ->
+                expect(editor.getText()).
+                    toBe "foo\\054bar\\054baz"
+
     describe "language-fp:unescape", ->
         it "still works even if the editor is not set", ->
             atom.workspace.destroyActivePaneItem()
@@ -55,9 +62,16 @@ describe "language-fp", ->
                 expect(editor.getText()).
                     toBe "text with spaces\nanother line with special chars%=!+"
 
-        it "encodes the selected text", ->
+        it "unescapes the selected text", ->
             editor.setText "\\074request\\076\\074so>service order number"
             editor.setSelectedBufferRange([[0,0], [0,23]])
             trigger "language-fp:unescape", ->
                 expect(editor.getText()).
                     toBe "<request><so>service order number"
+
+        it "unescapes multiple commas", ->
+            editor.setText "foo\\054bar\\054baz"
+            editor.setSelectedBufferRange([[0,0], [0,17]])
+            trigger "language-fp:unescape", ->
+                expect(editor.getText()).
+                    toBe "foo,bar,baz"
